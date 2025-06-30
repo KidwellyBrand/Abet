@@ -400,3 +400,5 @@ FodyWeavers.xsd
 *.sln.iml
 /Nordic/NordicBot/appsettings.json
 *.deb
+/WorkBot/appsettings.json
+/WorkBot/debian/WorkBot.1.0.0.deb

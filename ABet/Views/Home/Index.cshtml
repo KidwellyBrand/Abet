@@ -2,7 +2,68 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@{
+    ViewBag.Title = "Матчи";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center; /* по умолчанию все по центру */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: left; /* выравниваем заголовок влево */
+            margin-left: 10%; /* задаем красивый отступ */
+            margin-top: 30px;
+            font-size: 36px;
+        }
+
+        .match-banner {
+            margin-top: 50px;
+        }
+
+            .match-banner img {
+                width: 80%; /* регулируй при необходимости */
+                border: 2px solid #444;
+                border-radius: 10px;
+            }
+
+        .watch-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+            .watch-button:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+
+    <div class="match-banner">
+        <img src="~/Resourse/bar.jpg" alt="Турнирный баннер" />
+    </div>
+
+    <a href="@Url.Action("Video", "Home")" class="watch-button">Смотреть</a>
+</body>
+</html>
+
